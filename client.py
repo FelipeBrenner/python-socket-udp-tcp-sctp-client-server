@@ -7,7 +7,7 @@ while True:
     if protocol in ('TCP','UDP','SCTP'):
         break
 
-hostServer = "172.17.0.3"
+hostServer = input('Digite o IP do servidor: ')
 port = 8000
 address = (hostServer,port)
 
