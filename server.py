@@ -54,7 +54,7 @@ while True:
         if data == 'dcs':
             print('Servidor desconectado.')
             break
-        elif data == '2':
+        if data == 'grafico':
             plt.plot(x,y)
             plt.show()
         elif data:

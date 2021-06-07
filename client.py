@@ -21,7 +21,7 @@ elif protocol == 'SCTP':
         sock.connect(address)
 
 print('\n1 - Envia em sequência uma contagem de 1 a 10000')
-print('2 - Exibir no servidor o gráfico dos dados recebidos')
+print('grafico - Exibir no servidor o gráfico dos dados recebidos')
 print('dc - Desligar o cliente')
 print('dcs - Desligar o cliente e o servidor\n')
 
