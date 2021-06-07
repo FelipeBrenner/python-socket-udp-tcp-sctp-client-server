@@ -2,9 +2,11 @@
 
 ```bash
 # instalar as dependências
-sudo apt-get install python3-dev
-sudo apt-get install libsctp-dev
-sudo apt-get install python3-matplotlib
+apt-get install python3-dev
+apt-get install libsctp-dev
+apt-get install python3-setuptools
+python3 setup.py install
+apt-get install python3-matplotlib
 ```
 
 ```bash
