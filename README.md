@@ -1,27 +1,38 @@
 ## Comandos
 
 ```bash
-# trabalhei com docker containers
-# essas configurações abaixo foram necessárias para utilizar interface gráfica
+# subir docker container
 docker run --rm -it \
    --env="DISPLAY" \
    --workdir=/app \
    --volume="$PWD":/app \
-   --volume="/etc/group:/etc/group:ro" \
-   --volume="/etc/passwd:/etc/passwd:ro" \
-   --volume="/etc/shadow:/etc/shadow:ro" \
-   --volume="/etc/sudoers.d:/etc/sudoers.d:ro" \
+   --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+   --net=host \ # se quiser criar o container no driver de rede host
    gcc
 ```
 
 ```bash
 # instalar as dependências
+apt-get update
+apt-get upgrade
 apt-get install python3-dev
 apt-get install libsctp-dev
 apt-get install python3-setuptools
 python3 setup.py install
 apt-get install python3-matplotlib
+```
+
+```bash
+# consultar o IP
+hostname -i
+```
+
+```bash
+# executar o código do servidor
+python3 server.py
+# executar o código do cliente
+python3 client.py
 ```
 
 ```bash
@@ -47,3 +58,5 @@ iperf3 -f m -i 1 -t 10 -c <host_server> -p <port>
 - [Socket Programming in Python (Guide)](https://realpython.com/python-sockets/)
 - [Matplotlib - Usage Guide](https://matplotlib.org/stable/tutorials/introductory/usage.html#sphx-glr-tutorials-introductory-usage-py)
 - [Using GUI's with Docker](http://wiki.ros.org/docker/Tutorials/GUI)
+- [Running GUI Applications inside Docker Containers](https://medium.com/@SaravSun/running-gui-applications-inside-docker-containers-83d65c0db110)
+- [How can I use matplotlib.pyplot in a docker container?](https://stackoverflow.com/questions/46018102/how-can-i-use-matplotlib-pyplot-in-a-docker-container)
