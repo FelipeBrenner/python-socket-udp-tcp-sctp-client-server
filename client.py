@@ -1,5 +1,6 @@
 import socket
 import sctp
+from time import sleep
 
 protocol = ''
 while True:
@@ -8,12 +9,12 @@ while True:
         break
 
 hostServer = input('Digite o IP do servidor: ')
-port = 8000
+port = 8001
 address = (hostServer,port)
 
 if protocol == 'TCP':
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.connect(address)       
+        sock.connect(address)  
 elif protocol == 'UDP':
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)     
 elif protocol == 'SCTP':
@@ -32,6 +33,7 @@ while True:
         for j in range(1,10000):
             if protocol == 'TCP':
                 sock.send(str.encode(str(j)))
+                # sleep(0.001)
             elif protocol == 'UDP':
                 sock.sendto(str.encode(str(j)), address)
             elif protocol == 'SCTP':

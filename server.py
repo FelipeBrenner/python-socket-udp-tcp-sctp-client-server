@@ -9,7 +9,7 @@ while True:
         break
 
 host = socket.gethostname()
-port = 8000
+port = 8001
 address = (host,port)
 buffer = 1024
 
@@ -56,6 +56,7 @@ while True:
             break
         if data == 'grafico':
             plt.plot(x,y)
+            # plt.savefig('grafico.png',format='png')
             plt.show()
         elif data:
             # Exibe os dados recebidos
