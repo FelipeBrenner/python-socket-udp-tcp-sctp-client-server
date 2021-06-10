@@ -2,3 +2,6 @@
 /dist
 /pysctp.egg-info
 /__pycache__
+/graficoTCP.png
+/graficoUDP.png
+/graficoSCTP.png

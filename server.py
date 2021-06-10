@@ -1,5 +1,7 @@
 import socket
 import sctp
+import matplotlib
+matplotlib.use('agg')
 from matplotlib import pyplot as plt
 
 protocol = ''
@@ -56,8 +58,8 @@ while True:
             break
         if data == 'grafico':
             plt.plot(x,y)
-            # plt.savefig('grafico.png',format='png')
-            plt.show()
+            plt.title('Gráfico ' + protocol)
+            plt.savefig('grafico' + protocol + '.png')
         elif data:
             # Exibe os dados recebidos
             if protocol in ('TCP','SCTP'):

@@ -3,13 +3,8 @@
 ```bash
 # subir docker container
 docker run --rm -it \
-   -v /tmp/.X11-unix:/tmp/.X11-unix \
-   -e DISPLAY=unix$DISPLAY \
-   -e GDK_SCALE \
-   -e GDK_DPI_SCALE \
    --workdir=/app \
    --volume="$PWD":/app \
-   # --net=host \ # utilizar essa configuração para criar container no drive de rede host para ser possível a visualização dos gráficos
    gcc
 ```
 
