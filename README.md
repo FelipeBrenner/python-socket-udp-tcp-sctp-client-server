@@ -34,8 +34,11 @@ python3 client.py
 ```bash
 # se quiser testar gerando tráfego para interferência para analisar os comportamentos
 
-# instalar o iperf
+# instalar o iperf no servidor e no cliente
 apt-get install iperf3
+# abrir em outros prompts os containers do servidor e do cliente
+# <container_id> é o ID do container, por exemplo 68e0a58b9033
+sudo docker container exec -it <container_id> bash
 # rodar o iperf no servidor
 # <port> qualquer porta disponível
 iperf3 -s -p <port>

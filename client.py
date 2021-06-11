@@ -1,5 +1,6 @@
 import socket
 import sctp
+import time
 from time import sleep
 
 protocol = ''
@@ -9,7 +10,7 @@ while True:
         break
 
 hostServer = input('Digite o IP do servidor: ')
-port = 8001
+port = 8000
 address = (hostServer,port)
 
 if protocol == 'TCP':
@@ -30,6 +31,7 @@ while True:
     i = input('Digite uma mensagem ou um comando: ')
 
     if i == '1':
+        ini = time.time()
         for j in range(1,10000):
             if protocol == 'TCP':
                 sock.send(str.encode(str(j)))
@@ -39,6 +41,8 @@ while True:
             elif protocol == 'SCTP':
                 sock.sctp_send(str(j))
                 sock.shutdown(0)
+        fim = time.time()
+        print('Envio levou %.2f segundos' % (fim - ini))
     elif i == 'dc':
         break
     else:

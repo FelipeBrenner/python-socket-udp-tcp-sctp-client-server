@@ -3,6 +3,7 @@ import sctp
 import matplotlib
 matplotlib.use('agg')
 from matplotlib import pyplot as plt
+import time
 
 protocol = ''
 while True:
@@ -11,7 +12,7 @@ while True:
         break
 
 host = socket.gethostname()
-port = 8001
+port = 8000
 address = (host,port)
 buffer = 1024
 
