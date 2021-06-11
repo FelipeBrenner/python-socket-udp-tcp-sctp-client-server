@@ -7,8 +7,8 @@ import time
 
 protocol = ''
 while True:
-    protocol = input('Digite o protocolo desejado (TCP, UDP ou SCTP): ')
-    if protocol in ('TCP','UDP','SCTP'):
+    protocol = input('Digite o protocolo desejado (UDP, TCP ou SCTP): ')
+    if protocol in ('UDP','TCP','SCTP'):
         break
 
 host = socket.gethostname()
@@ -16,13 +16,13 @@ port = 8000
 address = (host,port)
 buffer = 1024
 
-if protocol == 'TCP':
+if protocol == 'UDP':
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock.bind(address)
+elif protocol == 'TCP':
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.bind(address)
         sock.listen()
-elif protocol == 'UDP':
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        sock.bind(address)
 elif protocol == 'SCTP':
         sock = sctp.sctpsocket_tcp(socket.AF_INET)
         sock.bind(address)
