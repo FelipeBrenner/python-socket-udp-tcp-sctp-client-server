@@ -17,7 +17,7 @@ if protocol == 'UDP':
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)     
 elif protocol == 'TCP':
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.connect(address)  
+        sock.connect(address)
 elif protocol == 'SCTP':
         sock = sctp.sctpsocket_tcp(socket.AF_INET)
         sock.connect(address)
@@ -39,7 +39,7 @@ while True:
                 sock.send(str.encode(str(j)))
                 # sleep(0.001)
             elif protocol == 'SCTP':
-                sock.sctp_send(str(j))
+                sock.sctp_send(str(j),stream=9)
                 # sock.shutdown(0)
         fim = time.time()
         print('Envio levou %.2f segundos' % (fim - ini))
@@ -51,7 +51,7 @@ while True:
         elif protocol == 'TCP':
             sock.send(str.encode(i))
         elif protocol == 'SCTP':
-            sock.sctp_send(i)
+            sock.sctp_send(i,stream=9)
             # sock.shutdown(0)
 
         if i == 'dcs':
