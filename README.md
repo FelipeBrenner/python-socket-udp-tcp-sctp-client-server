@@ -1,6 +1,6 @@
 ## 💻 Projeto
 
-Código desenvolvido em Python para a cadeira de Redes de Computadores: Aplicação e Transporte (Redes de Computadores I no currículo antigo), da graduação de Ciência da Computação da Unisinos. Consiste na implementação do protocolo SCTP com comunicação entre cliente e servidor, utilizando docker containers. Implementado também os protocolos TCP e UDP para avaliação e comparação do funcionamento, e exibição dos dados com gráficos utilizando a biblioteca Matplotlib.
+Código desenvolvido em Python para a cadeira de Redes de Computadores: Aplicação e Transporte (Redes de Computadores I no currículo antigo), da graduação de Ciência da Computação da Unisinos. Consiste na implementação do protocolo SCTP com comunicação entre cliente e servidor utilizando Socket e docker containers. Implementado também os protocolos TCP e UDP para avaliação e comparação do funcionamento, e exibição dos dados com gráficos utilizando a biblioteca Matplotlib.
 
 ## 🚀 Tecnologias
 
@@ -10,6 +10,7 @@ Código desenvolvido em Python para a cadeira de Redes de Computadores: Aplicaç
 - UDP
 - TCP
 - SCTP
+- Socket
 
 ## ⚙ Comandos
 
