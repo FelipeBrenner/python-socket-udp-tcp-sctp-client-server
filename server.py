@@ -11,7 +11,7 @@ while True:
         break
 
 host = socket.gethostname()
-port = 8000
+port = 8001
 address = (host,port)
 buffer = 1024
 

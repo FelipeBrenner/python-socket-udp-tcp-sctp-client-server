@@ -10,7 +10,7 @@ while True:
         break
 
 hostServer = input('Digite o IP do servidor: ')
-port = 8000
+port = 8001
 address = (hostServer,port)
 
 if protocol == 'UDP':
@@ -37,7 +37,7 @@ while True:
                 sock.sendto(str.encode(str(j)), address)
             elif protocol == 'TCP':
                 sock.send(str.encode(str(j)))
-                # sleep(0.001)
+                # sleep(0.005)
             elif protocol == 'SCTP':
                 sock.sctp_send(str(j),stream=9)
                 # sock.shutdown(0)
