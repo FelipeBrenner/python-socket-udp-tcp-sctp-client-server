@@ -65,6 +65,13 @@ iperf3 -s -p <port>
 iperf3 -f m -i 1 -t 10 -c <host_server> -p <port>
 ```
 
+## 📹 Execução
+
+<video controls="controls">
+  <source type="video/mp4" src="execucao.mp4"></source>
+  <p>Your browser does not support the video element.</p>
+</video>
+
 ## 📖 Referências
 
 - [pysctp](https://github.com/P1sec/pysctp)
