@@ -67,10 +67,7 @@ iperf3 -f m -i 1 -t 10 -c <host_server> -p <port>
 
 ## 📹 Execução
 
-<video controls="controls">
-  <source type="video/mp4" src="execucao.mp4"></source>
-  <p>Your browser does not support the video element.</p>
-</video>
+[![Watch the video](https://img.youtube.com/vi/hTQoxfxwJSg/maxresdefault.jpg)](https://youtu.be/hTQoxfxwJSg)
 
 ## 📖 Referências
 
